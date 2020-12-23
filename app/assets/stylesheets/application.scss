@@ -7,10 +7,39 @@
  $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
  @import "@fortawesome/fontawesome-free/scss/fontawesome";
  @import "@fortawesome/fontawesome-free/scss/regular";
- 
+
  div.field_with_errors {
    display: contents;
-   input {
-     border: 2px solid red;
+   input
+   textarea {
+     @extend .is-invalid;
    }
  }
+
+ .base-container {
+   @extend .container-fluid;
+   max-width: var(--breakpoint-lg);
+   padding: 30px 15px;
+ }
+
+ body {
+   padding-top: 56px;
+ }
+
+ th,
+ td {
+   vertical-align: middle !important;
+ }
+
+ .break-word {
+   word-break: break-word;
+ }
+
+ .alert-alert {
+   @extend .alert-success;
+ }
+
+ .alert-notice {
+   @extend .alert-danger
+ }
+
